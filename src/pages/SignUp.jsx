@@ -83,7 +83,7 @@ const SignUp = () => {
   return (
     <>
       <Navbar1 />
-      <div className="flex flex-col items-center justify-center md:min-h-screen py-12 bg-slate-800 p-4">
+      <div className="flex flex-col items-center justify-center md:min-h-screen py-14 bg-slate-800 p-4">
         <div className="p-8 rounded-lg shadow-lg w-full max-w-md">
           <h1 className="md:text-3xl text-xl font-bold mb-8 text-slate-200 text-center">
             Sign Up as {role}
