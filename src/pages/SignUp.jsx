@@ -83,58 +83,70 @@ const SignUp = () => {
   return (
     <>
       <Navbar1 />
-      <div className="flex flex-col items-center justify-center md:min-h-screen py-32 bg-slate-800 p-4">
-        <h1 className="md:text-3xl text-xl font-bold mb-8 text-slate-200">Sign Up as {role}</h1>
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          placeholder="Name"
-          className="mb-4 p-2 rounded"
-        />
-        {formErrors.name && <p className="text-red-500">{formErrors.name}</p>}
-        
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Email"
-          className="mb-4 p-2 rounded"
-        />
-        {formErrors.email && <p className="text-red-500">{formErrors.email}</p>}
-        
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Password"
-          className="mb-4 p-2 rounded"
-        />
-        {formErrors.password && <p className="text-red-500">{formErrors.password}</p>}
-        
-        <input
-          type="password"
-          value={confirmPassword}
-          onChange={(e) => setConfirmPassword(e.target.value)}
-          placeholder="Confirm Password"
-          className="mb-4 p-2 rounded"
-        />
-        {formErrors.confirmPassword && <p className="text-red-500">{formErrors.confirmPassword}</p>}
-        
-        <input
-          type="text"
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-          placeholder="Phone Number"
-          className="mb-4 p-2 rounded"
-        />
-        {formErrors.phone && <p className="text-red-500">{formErrors.phone}</p>}
-        
-        <button onClick={handleSignup} className="bg-green-600  text-slate-200 p-2 rounded">Sign Up</button>
-        {error && <p className="text-red-500 mt-4">{error.message}</p>}
+      <div className="flex flex-col items-center justify-center md:min-h-screen py-12 bg-slate-800 p-4">
+        <div className="p-8 rounded-lg shadow-lg w-full max-w-md">
+          <h1 className="md:text-3xl text-xl font-bold mb-8 text-slate-200 text-center">
+            Sign Up as {role}
+          </h1>
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="Name"
+            className="mb-4 p-3 w-full rounded border border-slate-600 bg-white text-slate-800"
+          />
+          {formErrors.name && <p className="text-red-500 text-sm mb-4">{formErrors.name}</p>}
+  
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Email"
+            className="mb-4 p-3 w-full rounded border border-slate-600 bg-white text-slate-800"
+          />
+          {formErrors.email && <p className="text-red-500 text-sm mb-4">{formErrors.email}</p>}
+  
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Password"
+            className="mb-4 p-3 w-full rounded border border-slate-600 bg-white text-slate-800"
+          />
+          {formErrors.password && <p className="text-red-500 text-sm mb-4">{formErrors.password}</p>}
+  
+          <input
+            type="password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            placeholder="Confirm Password"
+            className="mb-4 p-3 w-full rounded border border-slate-600 bg-white text-slate-800"
+          />
+          {formErrors.confirmPassword && (
+            <p className="text-red-500 text-sm mb-4">{formErrors.confirmPassword}</p>
+          )}
+  
+          <input
+            type="text"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            placeholder="Phone Number"
+            className="mb-4 p-3 w-full rounded border border-slate-600 bg-white text-slate-800"
+          />
+          {formErrors.phone && <p className="text-red-500 text-sm mb-4">{formErrors.phone}</p>}
+  
+          <button
+            onClick={handleSignup}
+            className="bg-green-600 w-full text-slate-200 p-3 rounded hover:bg-green-700 transition-colors"
+          >
+            Sign Up
+          </button>
+          {error && <p className="text-red-500 mt-4 text-center">{error.message}</p>}
+        </div>
       </div>
     </>
   );
+  
 };
 
 export default SignUp;
