@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Roboto', 'sans-serif'], // Add your default font here
+      },
       colors: {
         charcoal: '#1E201E',
         moss: '#3C3D37',
